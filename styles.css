@@ -14,9 +14,10 @@ a {
 }
 
 body {
-    background-color: #0000;
+    background-color: #1c2126;
     font-family: "Inter", sans-serif;
     height: 3000px;
+    padding-top: 60px;
 }
 
 .header {
@@ -71,7 +72,9 @@ body {
 }
 
 .heading {
-
+    color: darkmagenta;
+    font-size: 70px;
+    margin-bottom: 20px;
 }
 
 .text {
