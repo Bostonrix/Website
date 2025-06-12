@@ -1,25 +1,46 @@
 <!DOCTYPE html>
 
-<html>
-<head>
-<meta charset="utf-8">
-<title>Home</title>
-<link rel="stylesheet" href="styles.css">
-</head>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Home</title>
+        <!--fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <!--reference stylesheet-->
+        <link rel="stylesheet" href="styles.css">
+    </head>
 
-<!--Headers-->
-<ul>
-    <li><a class="active" href="index.html">Home</a> </li>
-    <!--In future make this a dropdown with projects?-->
-    <li><a href="projects/projects.html">Projects</a> </li>
-    <li><a href="socials.html">Socials</a> </li>
-</ul>
+    <!--navbar-->
+    <header class="header">
+        <div class="header_content">
+            <a href="index.html" class="pfp">My Portfolio</a>
 
-<!--Introductory Section-->
-<body>
-<h4>This is a chunk of text that will contain an intro about me</h4>
-<img src="https://www.w3schools.com/howto/img_avatar.png" alt="HeadShot">
-</body>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/projects/projects.html" class="nav__link">Projects</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="socials.html" class="nav__link">Socials</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!--Introductory Section-->
+    <main class="main">
+        <h1 class="heading">Hi my name is Boston Rix, welcome to my portfolio</h1>
+        <p class="text">Ever since I was young, I have been fascinated by technology...</p>
+<!--        <img src="https://www.w3schools.com/howto/img_avatar.png" alt="HeadShot">-->
+    </main>
 
 
 </html>
