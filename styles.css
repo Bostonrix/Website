@@ -1,3 +1,8 @@
+/*Color theme for site: Neon Tones with Sharp Contrast*/
+/*Black: Void: #0E0B16*/
+/*Magenta: Fuschia: #A239CA*/
+/*Blue: Jewel: #4717F6*/
+/*Grey: Stark: #E7DFDD*/
 * {
     margin: 0;
     padding: 0;
@@ -14,18 +19,19 @@ a {
 }
 
 body {
-    background-color: #1c2126;
+    background-color: #0E0B16;
     font-family: "Inter", sans-serif;
     height: 3000px;
     padding-top: 60px;
 }
 
 .header {
-    background-color: white;
-    border-bottom: 1px solid rgb(212, 217, 219);
+    background-color: Black;
+    border-bottom: 1px solid Black;
     position: fixed;
     top: 0;
     width: 100%;
+    color: #E7DFDD;
 }
 
 .header_content {
@@ -52,18 +58,17 @@ body {
 }
 
 .nav__item {
-
 }
 
 .nav__link {
-    color: rgba(0, 0, 0, 0.65);
+    color: #E7DFDD;
     font-weight: 500;
     font-size: 15px;
     transition: all 0.4s;
 }
 
 .nav__link:hover {
-    color: rgb(0, 0, 0, 1);
+    color: rgb(110, 110, 110);
 }
 
 .main {
@@ -72,7 +77,7 @@ body {
 }
 
 .heading {
-    color: darkmagenta;
+    color: #A239CA;
     font-size: 70px;
     margin-bottom: 20px;
 }
