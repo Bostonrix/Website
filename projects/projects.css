@@ -132,6 +132,23 @@
     font-weight: bold;
 }
 
+.card-image {
+    position: static;
+    margin: 20px auto 0;
+    width: 80px;
+    height: 80px;
+}
+
+.card-image {
+    width: 100px;
+    height: 100px;
+}
+
+.circular-image {
+    width: 70px;
+    height: 70px;
+}
+
 /* Mobile Responsive for Projects */
 @media (max-width: 768px) {
     .project-card .card-content {
