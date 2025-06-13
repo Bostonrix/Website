@@ -95,12 +95,11 @@
     background: linear-gradient(135deg, #A239CA, #4717F6);
     color: #fff;
     padding: 10px 20px;
-    border-radius: 25px;
+    border-radius: 30px;
     font-size: 14px;
     font-weight: 600;
     text-decoration: none;
     transition: all 0.3s ease;
-    border: 2px solid transparent;
 }
 
 .project-link:hover {
