@@ -21,7 +21,8 @@
       "techStack": ["Python"],
       "keyLearnings": ["UI building in Python",
         "Queue systems"],
-      "image": "../photos/p2.png"
+      "image": "../photos/p2.png",
+      "link": "https://github.com/Bostonrix/dndscape"
     }
   ]
 }
