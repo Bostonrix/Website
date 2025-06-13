@@ -8,7 +8,8 @@
       "keyLearnings": [
         "Modern CSS techniques including gradients and animations",
         "Responsive web design principles",
-        "Cross-Device Compatibility"
+        "Cross-Device Compatibility",
+        "Conditional rendering using JS"
       ],
       "image": "../photos/p1.png",
       "link": "https://github.com/Bostonrix/Website"
