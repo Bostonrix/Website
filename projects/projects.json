@@ -17,7 +17,7 @@
     {
       "title": "DnDScape",
       "status": "Starting Soon",
-      "description": "A Python app that loops through stored music based on category (E.g. You are playing DnD and enter a spooky cave, the DM would select the Spooky folder and the music would fade to then loop all spooky music in a queue).",
+      "description": "A Python app that loops through stored music based on category.",
       "techStack": ["Python"],
       "keyLearnings": ["UI building in Python",
         "Queue systems"]
