@@ -44,33 +44,125 @@
         <p class="text-enhanced">A showcase of my technical projects and the skills I've developed through hands-on experience.</p>
     </div>
 
-    <div class="experience-container">
+    <div class="experience-container" id="projects-container">
+        <!-- Projects will be dynamically loaded here -->
+        <div class="loading-message">Loading projects...</div>
+    </div>
+</main>
+
+<script>
+    // Function to load projects from JSON file
+    async function loadProjects() {
+        try {
+            const response = await fetch('projects.json');
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            const data = await response.json();
+            displayProjects(data.projects);
+        } catch (error) {
+            console.error('Error loading projects:', error);
+            document.getElementById('projects-container').innerHTML =
+                '<div class="error-message">Error loading projects. Please try again later.</div>';
+        }
+    }
+
+    // Function to display projects
+    function displayProjects(projects) {
+        const container = document.getElementById('projects-container');
+
+        if (projects.length === 0) {
+            container.innerHTML = '<div class="no-projects">No projects found.</div>';
+            return;
+        }
+
+        container.innerHTML = projects.map(project => `
         <div class="project-card">
             <div class="card-content">
-                <h3 class="card-title">Personal Portfolio Website</h3>
-                <p class="card-company">Ongoing Development</p>
+                <h3 class="card-title">${escapeHtml(project.title)}</h3>
+                <p class="card-company">${escapeHtml(project.status || 'Completed')}</p>
 
+                ${project.techStack && project.techStack.length > 0 ? `
                 <div class="project-section">
                     <h4 class="section-title">Tech Stack:</h4>
                     <ul class="tech-list">
-                        <li class="tech-item">HTML5</li>
-                        <li class="tech-item">CSS3</li>
+                        ${project.techStack.map(tech => `<li class="tech-item">${escapeHtml(tech)}</li>`).join('')}
                     </ul>
                 </div>
+                ` : ''}
 
+                ${project.keyLearnings && project.keyLearnings.length > 0 ? `
                 <div class="project-section">
                     <h4 class="section-title">Key Learnings:</h4>
                     <ul class="learning-list">
-                        <li class="learning-item">Modern CSS techniques including gradients and animations</li>
-                        <li class="learning-item">Responsive web design principles</li>
-                        <li class="learning-item">Cross-Device Compatability</li>
+                        ${project.keyLearnings.map(learning => `<li class="learning-item">${escapeHtml(learning)}</li>`).join('')}
                     </ul>
                 </div>
+                ` : ''}
+
+                ${project.description ? `
+                <div class="project-section">
+                    <p class="card-description">${escapeHtml(project.description)}</p>
+                </div>
+                ` : ''}
+
+                ${project.link ? `
+                <div class="project-section">
+                    <a href="${escapeHtml(project.link)}" target="_blank" class="project-link">View Project</a>
+                </div>
+                ` : ''}
             </div>
+            ${project.image ? `
             <div class="card-image">
-                <img src="../photos/p1.png" alt="Portfolio Website Code Screenshot" class="circular-image">
+                <img src="${escapeHtml(project.image)}" alt="${escapeHtml(project.title)} Screenshot" class="circular-image">
             </div>
+            ` : ''}
         </div>
-    </div>
-</main>
+    `).join('');
+    }
+
+    // Helper function to escape HTML to prevent XSS
+    function escapeHtml(text) {
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
+    }
+
+    // Load projects when the page loads
+    document.addEventListener('DOMContentLoaded', loadProjects);
+</script>
+
+<style>
+    /* Additional styles for loading and error states */
+    .loading-message, .error-message, .no-projects {
+        text-align: center;
+        padding: 2rem;
+        font-size: 1.1rem;
+        color: #666;
+    }
+
+    .error-message {
+        color: #dc3545;
+    }
+
+    .project-description {
+        margin: 1rem 0;
+        line-height: 1.6;
+    }
+
+    .project-link {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        background-color: #007bff;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+    }
+
+    .project-link:hover {
+        background-color: #0056b3;
+    }
+</style>
+
 </html>

@@ -1,0 +1,17 @@
+{
+  "projects": [
+    {
+      "title": "Website",
+      "status": "Ongoing Development",
+      "description": "A responsive personal portfolio website showcasing my projects and skills.",
+      "techStack": ["HTML", "CSS", "JavaScript"],
+      "keyLearnings": [
+        "Modern CSS techniques including gradients and animations",
+        "Responsive web design principles",
+        "Cross-Device Compatibility"
+      ],
+      "image": "../photos/p1.png",
+      "link": "https://github.com/Bostonrix/Website"
+    }
+  ]
+}

@@ -141,13 +141,13 @@
 }
 
 .card-image {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
 }
 
 .circular-image {
-    width: 70px;
-    height: 70px;
+    width: 180px;
+    height: 180px;
 }
 
 /* Mobile Responsive for Projects */
