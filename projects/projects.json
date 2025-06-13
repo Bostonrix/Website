@@ -3,7 +3,7 @@
     {
       "title": "Website",
       "status": "Ongoing Development",
-      "description": "A responsive personal portfolio website showcasing my projects and skills.",
+      "description": "A personal portfolio website to showcase what I have built.",
       "techStack": ["HTML", "CSS", "JavaScript"],
       "keyLearnings": [
         "Modern CSS techniques including gradients and animations",
@@ -12,6 +12,14 @@
       ],
       "image": "../photos/p1.png",
       "link": "https://github.com/Bostonrix/Website"
+    },
+    {
+      "title": "DnDScape",
+      "status": "Starting Soon",
+      "description": "A Python app that loops through stored music based on category (E.g. You are playing DnD and enter a spooky cave, the DM would select the Spooky folder and the music would fade to then loop all spooky music in a queue).",
+      "techStack": ["Python"],
+      "keyLearnings": ["UI building in Python",
+        "Queue systems"]
     }
   ]
 }

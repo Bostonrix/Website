@@ -150,6 +150,18 @@
     height: 180px;
 }
 
+/* Additional styles for loading and error states */
+.loading-message, .error-message, .no-projects {
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.error-message {
+    color: #dc3545;
+}
+
 /* Mobile Responsive for Projects */
 @media (max-width: 768px) {
     .project-card .card-content {

@@ -32,6 +32,7 @@ body {
     top: 0;
     width: 100%;
     color: #E7DFDD;
+    z-index: 1000;
 }
 
 .header_content {
@@ -229,7 +230,7 @@ body {
 /* Animations */
 @keyframes gradientShift {
     0%, 100% {
-        background-position: 0% 50%;
+        background-position: 0 50%;
     }
     50% {
         background-position: 100% 50%;

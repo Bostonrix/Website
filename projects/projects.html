@@ -55,9 +55,6 @@
     async function loadProjects() {
         try {
             const response = await fetch('projects.json');
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
             const data = await response.json();
             displayProjects(data.projects);
         } catch (error) {
@@ -76,6 +73,8 @@
             return;
         }
 
+        /* Below is the JS for project cards, no comments as it appears on the website. */
+        /* Essentially, for each json project, create a card and populate */
         container.innerHTML = projects.map(project => `
         <div class="project-card">
             <div class="card-content">
@@ -131,38 +130,4 @@
     // Load projects when the page loads
     document.addEventListener('DOMContentLoaded', loadProjects);
 </script>
-
-<style>
-    /* Additional styles for loading and error states */
-    .loading-message, .error-message, .no-projects {
-        text-align: center;
-        padding: 2rem;
-        font-size: 1.1rem;
-        color: #666;
-    }
-
-    .error-message {
-        color: #dc3545;
-    }
-
-    .project-description {
-        margin: 1rem 0;
-        line-height: 1.6;
-    }
-
-    .project-link {
-        display: inline-block;
-        padding: 0.5rem 1rem;
-        background-color: #007bff;
-        color: white;
-        text-decoration: none;
-        border-radius: 4px;
-        transition: background-color 0.3s ease;
-    }
-
-    .project-link:hover {
-        background-color: #0056b3;
-    }
-</style>
-
 </html>
