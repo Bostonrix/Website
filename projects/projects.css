@@ -192,4 +192,14 @@
     .learning-item {
         text-align: left;
     }
+
+    .card-image {
+        width: 50px;
+        height: 50px;
+    }
+
+    .circular-image {
+        width: 40px;
+        height: 40px;
+    }
 }
