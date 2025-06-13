@@ -20,7 +20,8 @@
       "description": "A Python app that loops through stored music based on category.",
       "techStack": ["Python"],
       "keyLearnings": ["UI building in Python",
-        "Queue systems"]
+        "Queue systems"],
+      "image": "../photos/p2.png"
     }
   ]
 }
