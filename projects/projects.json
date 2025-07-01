@@ -1,6 +1,18 @@
 {
   "projects": [
     {
+      "title": "University Industry Project",
+      "status": "Completed",
+      "description": "A project sponsored by an external company, where we (Student Team) were tasked with modifying and implemented an instance of OpenWeb UI to match our clients website (Rapid Analysis), and create an install package for the end user..",
+      "techStack": ["HTML", "Svelte", "Python"],
+      "keyLearnings": [
+        "Basic understand of Svelte",
+        "Requirement gathering related skills",
+        "Stakeholder engagement techniques",
+        "Software Documentation Processes"
+      ]
+    },
+    {
       "title": "Website",
       "status": "Ongoing Development",
       "description": "A personal portfolio website to showcase what I have built.",
@@ -16,7 +28,7 @@
     },
     {
       "title": "DnDScape",
-      "status": "Starting Soon",
+      "status": "Ongoing Development",
       "description": "A Python app that loops through stored music based on category.",
       "techStack": ["Python"],
       "keyLearnings": ["UI building in Python",
